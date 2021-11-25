@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UserInfo" xmlns:tns="http://www.example.org/UserInfo" elementFormDefault="qualified">
+
+    <element name="User" type="tns:UserType"></element>
+
+    <complexType name="UserType">
+    	<sequence>
+    		<element ref="tns:UserID" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="UserID" type="string"></element>
+
+    <element name="Users" type="tns:UsersType"></element>
+
+    <complexType name="UsersType">
+    	<sequence>
+    		<element ref="tns:meta" minOccurs="0" maxOccurs="1"></element>
+    		<element ref="tns:data" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="meta" type="string" nillable="true"></element>
+
+    <element name="data" type="tns:dataType"></element>
+
+    <complexType name="dataType">
+    	<sequence>
+    		<element ref="tns:id" minOccurs="0" maxOccurs="1"></element>
+    		<element ref="tns:name" minOccurs="0" maxOccurs="1"></element>
+    		<element ref="tns:email" minOccurs="0" maxOccurs="1"></element>
+    		<element ref="tns:gender" maxOccurs="1" minOccurs="0"></element>
+    		<element ref="tns:status" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="id" type="string"></element>
+
+    <element name="name" type="string"></element>
+
+    <element name="email" type="string"></element>
+
+    <element name="gender" type="string"></element>
+
+    <element name="status" type="string"></element>
+</schema>

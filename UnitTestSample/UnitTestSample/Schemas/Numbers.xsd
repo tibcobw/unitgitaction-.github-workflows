@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Numbers" xmlns:tns="http://www.example.org/Numbers" elementFormDefault="qualified">
+
+    <element name="Input" type="tns:InputType"></element>
+
+    <complexType name="InputType">
+    	<sequence>
+    		<element name="Num1" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="Num2" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Output" type="tns:OuptputType"></element>
+
+    <complexType name="OuptputType">
+    	<sequence>
+    		<element name="Result" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+</schema>
